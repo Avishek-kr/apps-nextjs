@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function NewsList({ data }) {
@@ -7,7 +6,7 @@ export default function NewsList({ data }) {
         {data.map((newsItem) => (
             <li key={newsItem.id}>
                 <Link href={`/news/${newsItem.slug}`}>
-                    <Image src={`/images/news/${newsItem.image}`} alt={newsItem.title} fill />
+                    <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
                     <span>{newsItem.title}</span>
                 </Link>
             </li>
