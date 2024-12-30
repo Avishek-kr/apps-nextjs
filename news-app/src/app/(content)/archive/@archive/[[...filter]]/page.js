@@ -1,5 +1,5 @@
-import { getAvailableNewsMonths, getAvailableNewsYears, getNewsForYear, getNewsForYearAndMonth } from "../../../../../lib/news"
-import NewsList from "../../../../../components/news-list";
+import { getAvailableNewsMonths, getAvailableNewsYears, getNewsForYear, getNewsForYearAndMonth } from "../../../../../../lib/news"
+import NewsList from "../../../../../../components/news-list";
 import Link from "next/link";
 
 export default async function page({ params }) {

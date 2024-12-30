@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-const { DUMMY_NEWS } = require("../../../../dummy-news");
+const { DUMMY_NEWS } = require("../../../../../dummy-news");
 
 export default async function ItemDetails({ params }) {
     const slug = await params;

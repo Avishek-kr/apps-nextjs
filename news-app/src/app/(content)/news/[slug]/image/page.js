@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { DUMMY_NEWS } from "../../../../../dummy-news";
+import { DUMMY_NEWS } from "../../../../../../dummy-news";
 
 export default async function ItemDetails({ params }) {
     const slug = await params;
