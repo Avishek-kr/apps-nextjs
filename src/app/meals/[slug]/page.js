@@ -4,6 +4,19 @@ import classes from './detail-page.module.css';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({ params }) {
+  const meal = getMealDetail(params.slug);
+
+  if (!meal) {
+    notFound();
+  }
+  
+  return {
+    title: meal.title,
+    description: meal.summary
+  };
+}
+
 const page = async ({ params }) => {
   const { slug: urlSlug } = await params;
   const meal = await getMealDetail(urlSlug);
