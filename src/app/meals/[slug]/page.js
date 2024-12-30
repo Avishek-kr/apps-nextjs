@@ -17,6 +17,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
+
 const page = async ({ params }) => {
   const { slug: urlSlug } = await params;
   const meal = await getMealDetail(urlSlug);
